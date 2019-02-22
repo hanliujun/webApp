@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const api = {\n    request({\n        url, data, methods\n    }){\n        return  $.ajax({\n            url: '/api'+url,\n            data: data || '',\n            methods: methods || 'get',\n            success: (res) =>{\n                return res\n            },\n            error: () =>{\n                return '请求错误'\n            }\n        })\n    }\n}\n\nmodule.exports = api\n\n//# sourceURL=webpack:///./src/javascripts/api/index.js?");
+eval("const api = {\r\n    request({\r\n        url, data, methods\r\n    }){\r\n        return  $.ajax({\r\n            url: '/api'+url,\r\n            data: data || '',\r\n            methods: methods || 'get',\r\n            success: (res) =>{\r\n                return res\r\n            },\r\n            error: () =>{\r\n                return '请求错误'\r\n            }\r\n        })\r\n    }\r\n}\r\n\r\nmodule.exports = api\n\n//# sourceURL=webpack:///./src/javascripts/api/index.js?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("const api = {\n    request({\n        url, data, methods\n    }){\n       
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const render = () => {\n    let appcinameView = __webpack_require__(/*! ../view/ciname.html */ \"./src/javascripts/view/ciname.html\")\n\n    // let fillemList = await getFilemList()\n    // // console.log(getFilemList())\n    // fillemList.movieList.forEach(element => {\n    //     element.img = element.img.replace('w.h', '128.180')\n    // });\n    $('#app #main').html(appcinameView)\n}\n\n\nmodule.exports = {render}\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-ciname-controller.js?");
+eval("const render = () => {\r\n    let appcinameView = __webpack_require__(/*! ../view/ciname.html */ \"./src/javascripts/view/ciname.html\")\r\n\r\n    // let fillemList = await getFilemList()\r\n    // // console.log(getFilemList())\r\n    // fillemList.movieList.forEach(element => {\r\n    //     element.img = element.img.replace('w.h', '128.180')\r\n    // });\r\n    $('#app #main').html(appcinameView)\r\n}\r\n\r\n\r\nmodule.exports = {render}\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-ciname-controller.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("const render = () => {\n    let appcinameView = __webpack_require__(/*! ..
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// const appMainViewController = require('./app-main-controller')\n\nconst render = ()=>{\n    let appHeaderView = __webpack_require__(/*! ../view/header.html */ \"./src/javascripts/view/header.html\")\n    // let appMainView = require('../view/main.html')\n    let appFooterView = __webpack_require__(/*! ../view/footer.html */ \"./src/javascripts/view/footer.html\")\n    console.log(appFooterView)\n    $('#app #header').append(appHeaderView)\n        // .append(appMainView)\n    $('#app #footer').append(appFooterView)\n    // appMainViewController.render();\n}\n\nmodule.exports = {render}\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-controller.js?");
+eval("// const appMainViewController = require('./app-main-controller')\r\n\r\nconst render = ()=>{\r\n    let appHeaderView = __webpack_require__(/*! ../view/header.html */ \"./src/javascripts/view/header.html\")\r\n    // let appMainView = require('../view/main.html')\r\n    let appFooterView = __webpack_require__(/*! ../view/footer.html */ \"./src/javascripts/view/footer.html\")\r\n    console.log(appFooterView)\r\n    $('#app #header').append(appHeaderView)\r\n        // .append(appMainView)\r\n    $('#app #footer').append(appFooterView)\r\n    // appMainViewController.render();\r\n}\r\n\r\nmodule.exports = {render}\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-controller.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("// const appMainViewController = require('./app-main-controller')\n\nconst
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const {getFilemList} = __webpack_require__(/*! ../modules/app-main-model */ \"./src/javascripts/modules/app-main-model.js\")\n// const template = require('art-template')\nconst render = async () => {\n    let appMainView = __webpack_require__(/*! ../view/main.html */ \"./src/javascripts/view/main.html\")\n\n    let fillemList = await getFilemList()\n    // console.log(getFilemList())\n    fillemList.movieList.forEach(element => {\n        element.img = element.img.replace('w.h', '128.180')\n    });\n    $('#app #main').html(template.compile(appMainView)({data: fillemList.movieList}))\n}\n\nmodule.exports = { render }\n\n\n  // getFilemList((data)=>{\n    //     // data.movieList[0].imgsrc = data.movieList[0].img.replace('w.h', '128.180')\n    //     data.movieList.forEach(element => {\n    //         element.img = element.img.replace('w.h', '128.180')\n    //     });\n    //     console.log(data)\n    //     let rander = template.compile(appMainView);\n    //     $('#app #main').html(rander({\n    //         data: data.movieList \n    //     }))\n    // })\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-main-controller.js?");
+eval("const {getFilemList} = __webpack_require__(/*! ../modules/app-main-model */ \"./src/javascripts/modules/app-main-model.js\")\r\n// const template = require('art-template')\r\nconst render = async () => {\r\n    let appMainView = __webpack_require__(/*! ../view/main.html */ \"./src/javascripts/view/main.html\")\r\n\r\n    let fillemList = await getFilemList()\r\n    // console.log(getFilemList())\r\n    fillemList.movieList.forEach(element => {\r\n        element.img = element.img.replace('w.h', '128.180')\r\n    });\r\n    $('#app #main').html(template.compile(appMainView)({data: fillemList.movieList}))\r\n}\r\n\r\nmodule.exports = { render }\r\n\r\n\r\n  // getFilemList((data)=>{\r\n    //     // data.movieList[0].imgsrc = data.movieList[0].img.replace('w.h', '128.180')\r\n    //     data.movieList.forEach(element => {\r\n    //         element.img = element.img.replace('w.h', '128.180')\r\n    //     });\r\n    //     console.log(data)\r\n    //     let rander = template.compile(appMainView);\r\n    //     $('#app #main').html(rander({\r\n    //         data: data.movieList \r\n    //     }))\r\n    // })\n\n//# sourceURL=webpack:///./src/javascripts/controllers/app-main-controller.js?");
 
 /***/ }),
 
@@ -137,7 +137,7 @@ eval("const {getFilemList} = __webpack_require__(/*! ../modules/app-main-model *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const renderView = __webpack_require__(/*! ./controllers/app-controller */ \"./src/javascripts/controllers/app-controller.js\")\nconst Router = __webpack_require__(/*! ./router */ \"./src/javascripts/router/index.js\")\n\nrenderView.render()\n\nnew Router().init()\n// let promise = new Promise((resolve, reject) => {\n//     setTimeout(()=>{\n//         resolve('123')\n//     },2000)\n// })\n\n// let a = async () => {\n//     let hh = await promise.then((data) => {\n//        return data\n//     })\n//     console.log(hh)\n// }\n// a()\n\n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
+eval("const renderView = __webpack_require__(/*! ./controllers/app-controller */ \"./src/javascripts/controllers/app-controller.js\")\r\nconst Router = __webpack_require__(/*! ./router */ \"./src/javascripts/router/index.js\")\r\n\r\nrenderView.render()\r\n\r\nnew Router().init()\r\n// let promise = new Promise((resolve, reject) => {\r\n//     setTimeout(()=>{\r\n//         resolve('123')\r\n//     },2000)\r\n// })\r\n\r\n// let a = async () => {\r\n//     let hh = await promise.then((data) => {\r\n//        return data\r\n//     })\r\n//     console.log(hh)\r\n// }\r\n// a()\r\n\n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
 
 /***/ }),
 
@@ -148,7 +148,7 @@ eval("const renderView = __webpack_require__(/*! ./controllers/app-controller */
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/index.js\")\n\nconst getFilemList = ()=>{\n    return  api.request({url: '/ajax/movieOnInfoList?token='})\n}\n\n\n// return new Promise((resolve, reject) => {\n//     api.request({\n//         url: '/ajax/movieOnInfoList?token=',\n//         success: (data)=>{\n//             resolve(data)\n//         }\n//     })\n// })\n\n\nmodule.exports = {getFilemList}\n\n//# sourceURL=webpack:///./src/javascripts/modules/app-main-model.js?");
+eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/index.js\")\r\n\r\nconst getFilemList = ()=>{\r\n    return  api.request({url: '/ajax/movieOnInfoList?token='})\r\n}\r\n\r\n\r\n// return new Promise((resolve, reject) => {\r\n//     api.request({\r\n//         url: '/ajax/movieOnInfoList?token=',\r\n//         success: (data)=>{\r\n//             resolve(data)\r\n//         }\r\n//     })\r\n// })\r\n\r\n\r\nmodule.exports = {getFilemList}\n\n//# sourceURL=webpack:///./src/javascripts/modules/app-main-model.js?");
 
 /***/ }),
 
@@ -159,7 +159,7 @@ eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/inde
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const routes = __webpack_require__(/*! ./routes */ \"./src/javascripts/router/routes.js\")\n\nclass Router {\n    constructor () {\n        this.routes = routes\n    }\n    init () {\n        console.log(this.routes)\n        this.listenHashChange();\n    }\n    listenHashChange () {\n        let loadPage = this.loadPage.bind(this)\n        window.addEventListener('hashchange', this.loadPage)\n    }\n    loadPage () {\n        // console.log(window.location.hash)\n        let path = window.location.hash.replace('#','');\n        let handler = routes[path]\n        if (handler) {\n            console.log('xiangtong')\n            handler()\n        }\n    }\n}\n\n\nmodule.exports = Router\n\n//# sourceURL=webpack:///./src/javascripts/router/index.js?");
+eval("const routes = __webpack_require__(/*! ./routes */ \"./src/javascripts/router/routes.js\")\r\n\r\nclass Router {\r\n    constructor () {\r\n        this.routes = routes\r\n    }\r\n    init () {\r\n        console.log(this.routes)\r\n        this.listenHashChange();\r\n    }\r\n    listenHashChange () {\r\n        let loadPage = this.loadPage.bind(this)\r\n        window.addEventListener('hashchange', this.loadPage)\r\n    }\r\n    loadPage () {\r\n        // console.log(window.location.hash)\r\n        let path = window.location.hash.replace('#','');\r\n        let handler = routes[path]\r\n        if (handler) {\r\n            console.log('xiangtong')\r\n            handler()\r\n        }\r\n    }\r\n}\r\n\r\n\r\nmodule.exports = Router\n\n//# sourceURL=webpack:///./src/javascripts/router/index.js?");
 
 /***/ }),
 
@@ -170,7 +170,7 @@ eval("const routes = __webpack_require__(/*! ./routes */ \"./src/javascripts/rou
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const appMainViewController = __webpack_require__(/*! ../controllers/app-main-controller */ \"./src/javascripts/controllers/app-main-controller.js\")\nconst appCinameViewController = __webpack_require__(/*! ../controllers/app-ciname-controller */ \"./src/javascripts/controllers/app-ciname-controller.js\")\n\nlet routes = {\n    \"/index\": appMainViewController.render,\n    '/cinema': appCinameViewController.render\n}\n\n\nmodule.exports = routes\n\n//# sourceURL=webpack:///./src/javascripts/router/routes.js?");
+eval("const appMainViewController = __webpack_require__(/*! ../controllers/app-main-controller */ \"./src/javascripts/controllers/app-main-controller.js\")\r\nconst appCinameViewController = __webpack_require__(/*! ../controllers/app-ciname-controller */ \"./src/javascripts/controllers/app-ciname-controller.js\")\r\n\r\nlet routes = {\r\n    \"/index\": appMainViewController.render,\r\n    '/cinema': appCinameViewController.render\r\n}\r\n\r\n\r\nmodule.exports = routes\n\n//# sourceURL=webpack:///./src/javascripts/router/routes.js?");
 
 /***/ }),
 
