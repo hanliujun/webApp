@@ -3,7 +3,9 @@ const Router = require('./router')
 
 renderView.render()
 
-new Router().init()
+new Router({
+    initial: '#/index'
+}).init()
 // let promise = new Promise((resolve, reject) => {
 //     setTimeout(()=>{
 //         resolve('123')

@@ -137,7 +137,7 @@ eval("const {getFilemList} = __webpack_require__(/*! ../modules/app-main-model *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const renderView = __webpack_require__(/*! ./controllers/app-controller */ \"./src/javascripts/controllers/app-controller.js\")\nconst Router = __webpack_require__(/*! ./router */ \"./src/javascripts/router/index.js\")\n\nrenderView.render()\n\nnew Router().init()\n// let promise = new Promise((resolve, reject) => {\n//     setTimeout(()=>{\n//         resolve('123')\n//     },2000)\n// })\n\n// let a = async () => {\n//     let hh = await promise.then((data) => {\n//        return data\n//     })\n//     console.log(hh)\n// }\n// a()\n\n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
+eval("const renderView = __webpack_require__(/*! ./controllers/app-controller */ \"./src/javascripts/controllers/app-controller.js\")\nconst Router = __webpack_require__(/*! ./router */ \"./src/javascripts/router/index.js\")\n\nrenderView.render()\n\nnew Router({\n    initial: '#/index'\n}).init()\n// let promise = new Promise((resolve, reject) => {\n//     setTimeout(()=>{\n//         resolve('123')\n//     },2000)\n// })\n\n// let a = async () => {\n//     let hh = await promise.then((data) => {\n//        return data\n//     })\n//     console.log(hh)\n// }\n// a()\n\n\n//# sourceURL=webpack:///./src/javascripts/index.js?");
 
 /***/ }),
 
@@ -159,7 +159,7 @@ eval("const api = __webpack_require__(/*! ../api */ \"./src/javascripts/api/inde
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const routes = __webpack_require__(/*! ./routes */ \"./src/javascripts/router/routes.js\")\n\nclass Router {\n    constructor () {\n        this.routes = routes\n    }\n    init () {\n        console.log(this.routes)\n        this.listenHashChange();\n    }\n    listenHashChange () {\n        let loadPage = this.loadPage.bind(this)\n        window.addEventListener('hashchange', this.loadPage)\n    }\n    loadPage () {\n        // console.log(window.location.hash)\n        let path = window.location.hash.replace('#','');\n        let handler = routes[path]\n        if (handler) {\n            console.log('xiangtong')\n            handler()\n        }\n    }\n}\n\n\nmodule.exports = Router\n\n//# sourceURL=webpack:///./src/javascripts/router/index.js?");
+eval("const routes = __webpack_require__(/*! ./routes */ \"./src/javascripts/router/routes.js\")\n\nclass Router {\n    constructor ({initial}) {\n        this.routes = routes //路由表\n        this.initial = initial //默认路由\n    }\n    init () {\n        this.initialAction()\n        this.listenHashChange()\n        // console.log(this)\n    }\n\n\n    handlerNavLink (path) { // 当路由跳转匹配成功后给a标签加上active类名   \n        $('.nav-link').removeClass('active')\n        $('.nav-link').each((i, item) => {\n            if ( $(item).data('path') === path ) $(item).addClass('active')\n        })\n    }\n    refreshRouter (path) { // 路由跳转动作\n        this.routes[path]()\n        this.handlerNavLink(path)\n    }\n    initialAction () { // 初始时判断有无hash等动作\n        let path = location.hash.replace('#', '')\n        if ( !path ) { // 当前没有hash值\n            location.hash = this.initial\n        } else {\n            this.refreshRouter(path)      \n        }\n    }\n    listenHashChange () { // 监听hash值变化后执行对应操作\n        window.addEventListener('hashchange', () => {\n            let path = location.hash.replace('#', '')\n            let handler = this.routes[path]\n            if ( handler ) {\n                this.refreshRouter(path) \n            } else {\n                // 如果路由表中没有这个路由，跳转到默认路由\n                // location.hash = '/404'\n                location.hash = this.initial\n            }\n        })\n    }\n}\n\n\nmodule.exports = Router\n\n//# sourceURL=webpack:///./src/javascripts/router/index.js?");
 
 /***/ }),
 
@@ -192,7 +192,7 @@ eval("module.exports = \"<div>    这是电影院kkkkkkk </div>\"\n\n//# sourceU
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<footer id=\\\"app-footer\\\">    <nav>        <a href=\\\"#/index\\\" class=\\\"active\\\"><i class=\\\"icon icon-dianying\\\"></i><span>电影</span></a>        <a href=\\\"#/cinema\\\"><i class=\\\"icon icon-yingyuan\\\"></i><span>影院</span></a>        <a href=\\\"\\\"><i class=\\\"icon icon-wode-copy\\\"></i><span>我的</span></a>        <a href=\\\"\\\"><i class=\\\"icon icon-wode-copy\\\"></i><span>我的</span></a>    </nav></footer>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/footer.html?");
+eval("module.exports = \"<footer id=\\\"app-footer\\\">    <nav>        <a href=\\\"#/index\\\" data-path=\\\"/index\\\" class=\\\"nav-link\\\"><i class=\\\"icon icon-dianying\\\"></i><span>电影</span></a>        <a href=\\\"#/cinema\\\" data-path=\\\"/cinema\\\" class=\\\"nav-link\\\"><i class=\\\"icon icon-yingyuan\\\"></i><span>影院</span></a>        <a href=\\\"#/user\\\" class=\\\"nav-link\\\"><i class=\\\"icon icon-wode-copy\\\"></i><span>我的</span></a>        <a href=\\\"#/user\\\" class=\\\"nav-link\\\"><i class=\\\"icon icon-wode-copy\\\"></i><span>我的</span></a>    </nav></footer>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/footer.html?");
 
 /***/ }),
 
