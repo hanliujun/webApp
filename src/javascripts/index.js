@@ -1,3 +1,11 @@
+
+// const appController = require('./controllers/app-controller')
+
+// appController.render()
+
+
+
+// 老师
 const renderView = require('./controllers/app-controller')
 const Router = require('./router')
 

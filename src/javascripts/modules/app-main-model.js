@@ -1,18 +1,14 @@
 const api = require('../api')
-
-const getFilemList = ()=>{
-    return  api.request({url: '/ajax/movieOnInfoList?token='})
+// 获取电影
+const getFilmsList = (callback) => {
+    api.request({
+        url: '/ajax/movieOnInfoList?token=',
+        success: (data) => {
+            callback(data)
+        }
+    })
 }
 
-
-// return new Promise((resolve, reject) => {
-//     api.request({
-//         url: '/ajax/movieOnInfoList?token=',
-//         success: (data)=>{
-//             resolve(data)
-//         }
-//     })
-// })
-
-
-module.exports = {getFilemList}
+module.exports = {
+    getFilmsList
+}

@@ -1,12 +1,12 @@
-const pathUtil = require('path')
+const path = require('path')
 
 const webpackConfig = {
-    mode: 'development', //配置打包模式
-    entry: { //入口
-        index: pathUtil.join(__dirname, '../src/javascripts/index.js')
+    mode: 'development', // 配置打包模式
+    entry: { // 入口
+        index: path.join(__dirname, '../src/javascripts/index.js')
     },
-    output: { //出口
-        filename: '[name].js' //如果配置的什么名字就输出什么名字
+    output: { // 出口
+        filename: '[name].js' // 如果配置的什么名字，就输出什么名字
     },
     module: { // 配置各个loader
         rules: [ // 放入一个一个的规则
@@ -17,7 +17,5 @@ const webpackConfig = {
         ] 
     }
 }
-
-
 
 module.exports = webpackConfig

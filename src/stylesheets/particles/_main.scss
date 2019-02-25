@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #bbbbbb3a;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+header, footer { flex-grow: 0; flex-shrink: 0; }
+
+.head{
+    width: 100%;
+    height: 3.2rem;
+    padding: 6.666667vw 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image:linear-gradient(90deg,#0af,#0085ff);
+}
+ .head-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.head-photo{
+    width: 1.6rem;
+    height: 1.6rem;
+    overflow: hidden; 
+    border-radius: 80px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+.head-photo img{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100px;
+}
+
+.head-login{
+    margin-left: .96rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex; 
+    flex-direction: column
+}
+.login-top{
+    font-size: .56rem;
+    font-weight: 700;
+    margin-bottom: .213333rem;
+    color: white;
+}
+.login-bottom{
+    font-size: .32rem;
+    font-weight: 400;
+    color: white;
+}
+.login-bottom i{
+    font-size: .32rem;
+}
+.arrows{
+    color: white;
+}
+
+/* main */
+main .icon-arrow-right-copy-copy{
+    color: rgba(116, 106, 106, 0.801);
+}
+
+
+.main-info{
+    width: 100%;
+    height: 2.226667rem;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+/* 红包 */
+.redpacket{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.redpacket i{
+    font-weight: 700;
+    font-size: .48rem;
+}
+.redpacket .redpacket-txt{
+    margin-top: 1.333333vw;
+    font-size: .32rem;
+    line-height: 3.73333vw;
+    font-weight: 700;
+    color: #666;
+}
+/* 金币 */
+.money{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.money i{
+    font-weight: 700;
+    font-size: .48rem;
+}
+.money .money-txt{
+    margin-top: 1.333333vw;
+    font-size: .32rem;
+    line-height: 3.73333vw;
+    font-weight: 700;
+    color: #666;
+}
+
+
+/* 我的地址 */
+.main-site{
+    width: 100%;
+    height: 100%;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    margin-top: .266667rem;
+    background: white; 
+    display: flex;
+}
+.site{
+    width: 100%;
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6.666667vw;
+}
+.site-left{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+}
+.site-left i{
+    width: 4.8vw;
+    height: 4.8vw;
+    font-size:.48rem; 
+    font-weight: 700;
+}
+.site-right{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding:3.733333vw 2.666667vw 3.733333vw 0;
+}
+
+
+/* 金币商城 */
+.main-gold{
+    width: 100%;
+    height: 100%;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    margin-top: .266667rem;
+    background: white; 
+}
+.shop{
+    width: 100%;
+    height:50%;
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 6.666667vw;
+    justify-content: center;
+}
+.shop-left{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop-left i{
+    width: 4.8vw;
+    height: 4.8vw;
+    font-size:.50rem; 
+    font-weight: 700;
+    color: rgb(78, 255, 47);
+}
+.shop-right{
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:3.733333vw 2.666667vw 3.733333vw 0;
+}
+/* 分享有钱赚 */
+.gift{
+    width: 100%;
+    height:50%;
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 6.666667vw;
+}
+.gift-left{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gift-left i{
+    width: 4.8vw;
+    height: 4.8vw;
+    font-size:.48rem; 
+    font-weight: 700;
+    color: orangered;
+}
+.gift-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:3.733333vw 2.666667vw 3.733333vw 0;
+}
+
+
+
+/* 客服 */
+.main-download{
+    width: 100%;
+    height: 100%;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    margin-top: .266667rem;
+    background: white; 
+}
+.service{
+    width: 100%;
+    height:50%;
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 6.666667vw;
+    justify-content: center;
+}
+.service-left{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-left i{
+    width: 4.8vw;
+    height: 4.8vw;
+    font-size:.50rem; 
+    font-weight: 700;
+    color: rgb(0, 132, 255, 0.911);
+}
+.service-right{
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:3.733333vw 2.666667vw 3.733333vw 0;
+}
+/* 下载饿了么 */
+.elem{
+    width: 100%;
+    height:50%;
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 6.666667vw;
+    justify-content: center;
+}
+.elem-left{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem-left i{
+    width: 4.8vw;
+    height: 4.8vw;
+    font-size:.60rem; 
+    font-weight: 700;
+    color: rgb(0, 132, 255, 0.911);
+}
+.elem-right{
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:3.733333vw 2.666667vw 3.733333vw 0;
+}
+
+/* 规则中心 */
+.rule{
+    width: 100%;
+    height:50%;
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 6.666667vw;
+    justify-content: center;
+}
+.rule-left{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rule-left i{
+    width: 4.8vw;
+    height: 4.8vw;
+    font-size:.50rem; 
+    font-weight: 700;
+    color:rgba(0, 132, 255, 0.911);
+}
+.rule-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:3.733333vw 2.666667vw 3.733333vw 0;
+}
+
+/* 隐私政策 */
+.privacy{
+    width: 100%;
+    height: .96rem;
+    text-align: center;
+    margin: 1.226667rem auto;
+    color: #4da6f0;
+    font-size: .4rem;
+}
+.privacy a{
+    outline: none;
+    color: inherit;
+}
+
+/* footer */
+footer{
+    height: 1.28rem;
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#app-footer  a{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #8e8e93;
+}
+
+#app-footer  a span{
+    display: block;
+    font-size: .266667rem;
+}
+
+#app-footer  i { font-size: .533333rem; }
+
+
+
+
+
+
+
+
+
+

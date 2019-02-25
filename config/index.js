@@ -1,12 +1,18 @@
-const pathUtil = require('path') //引入node的path模块
+
+const path = require('path')
+const serverConfig = require('./server-config')
 const webpackConfig = require('./webpack-config')
+
+// 全局的配置
 const config = {
-    path: {
-        src: pathUtil.join(__dirname, '../src'),
-        static: pathUtil.join(__dirname, '../src/static'),
-        dist: pathUtil.join(__dirname, '../dist')
+    path: { // 路径配置
+        src: path.join(__dirname, '../src'),
+        dist: path.join(__dirname, '../dist'),
+        static: path.join(__dirname, '../src/static'),
     },
+    serverConfig,
     webpackConfig
 }
 
 module.exports = config
+
